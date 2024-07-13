@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./productCard.css";
 import { FaCartPlus } from "react-icons/fa6";
 import formatCurrency from "../../utils/formatCurrency";
+import AppContext from "../../context/AppContext";
 
 const ProductCard = ({ data }) => {
+  const { cartItems, setCartItems } = useContext(AppContext);
+
+  const handleAddCart = () => setCartItems([...cartItems, data]);
+
   return (
     <section className="product-card">
       <img
@@ -17,7 +22,11 @@ const ProductCard = ({ data }) => {
         </h2>
         <h2 className="card__title">{data.title}</h2>
       </div>
-      <button type="button" className="button__add-cart">
+      <button
+        type="button"
+        className="button__add-cart"
+        onClick={handleAddCart}
+      >
         <FaCartPlus />
       </button>
     </section>
