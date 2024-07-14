@@ -9,8 +9,19 @@
 
 body {
   background-color: #ebebeb;
+  height: 100vh;
 }
 .container {
   max-width: 1100px;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
 }
