@@ -36,7 +36,7 @@ const Product = () => {
 
   console.log(product);
 
-  if (product === null) return <div>Pagina não encontrada</div>;
+  if (product === null) return <div>Carregando...</div>;
   return (
     <>
       <section className="container">

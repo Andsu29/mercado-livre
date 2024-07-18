@@ -9,7 +9,7 @@ const CartItem = ({ data }) => {
   const { cartItems, setCartItems } = useContext(AppContext);
 
   const handleRemoveItem = () => {
-    const updatedItems = cartItems.filter((item) => item.id != id);
+    const updatedItems = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedItems);
   };
 

@@ -1,5 +1,9 @@
 const formatCurrency = (value, currency) => {
-  return value.toLocaleString("pt-br", { style: "currency", currency });
+  if (value != null) {
+    return value.toLocaleString("pt-br", { style: "currency", currency });
+  } else {
+    return "";
+  }
 };
 
 export default formatCurrency;

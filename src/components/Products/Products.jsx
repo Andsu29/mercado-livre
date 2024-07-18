@@ -4,7 +4,6 @@ import fetchProducts from "../../api/fetchProducts";
 import ProductCard from "../ProductCard/ProductCard";
 import Loading from "../Loading/Loading";
 import AppContext from "../../context/AppContext";
-import { Link } from "react-router-dom";
 
 const Products = () => {
   const { products, setProducts, loading, setLoading } = useContext(AppContext);
@@ -20,9 +19,7 @@ const Products = () => {
   ) : (
     <section className="products container">
       {products.map((product) => (
-        <Link to={`produto/${product.id}`} key={product.id}>
-          <ProductCard data={product} />
-        </Link>
+        <ProductCard data={product} />
       ))}
     </section>
   );
